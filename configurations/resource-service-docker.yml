@@ -12,8 +12,14 @@ spring:
       max-file-size: 10MB
       max-request-size: 10MB
   rabbitmq:
-    exchange: x.mp3-resource-upload
-    routingkey: rk.mp3-resource-upload
+    exchange:
+      resource-uploaded: x.mp3-resource-uploaded
+      resource-processed: x.mp3-resource-processed
+    routingkey:
+      resource-uploaded: rk.mp3-resource-uploaded
+      resource-processed: rk.mp3-resource-processed
+    queue:
+      resource-processed: q.mp3-resource-processed
   datasource:
     driver-class-name: org.postgresql.Driver
   jpa:
