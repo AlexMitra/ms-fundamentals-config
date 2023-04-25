@@ -47,13 +47,14 @@ management:
   health:
     circuitbreakers:
       enabled: true
+  endpoint:
+    health:
+      show-details: always
 #  endpoints:
 #    web:
 #      exposure:
 #        include: *
-#  endpoint:
-#    health:
-#      show-details: always
+
 
 resilience4j:
   circuitbreaker:
